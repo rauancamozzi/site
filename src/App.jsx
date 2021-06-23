@@ -14,11 +14,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-
-  width: 90vw;
-
-  margin: 0 auto;
+  min-height: 100vh;
 `;
 
 const Pages = styled.div`
