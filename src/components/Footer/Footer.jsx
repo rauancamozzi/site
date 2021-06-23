@@ -1,4 +1,5 @@
 import React from 'react';
+import { acessGitHub, acessLinkedIn, acessInstagram } from '../../Social';
 
 import {
     FooterContainer,
@@ -11,21 +12,7 @@ import { IconContext } from 'react-icons';
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 
 export default function Footer() {
-    function acessGitHub(event) {
-        event.preventDefault();
-        window.location.href = "https://www.github.com/rauancamozzi";
-      }
-  
-      function acessLinkedIn(event) {
-        event.preventDefault();
-        window.location.href = "https://www.linkedin.com/in/rauan-camozzi";
-      }
-  
-      function acessInstagram(event) {
-        event.preventDefault();
-        window.location.href = "https://www.instagram.com/rauancamozzi";
-      }
-
+    
     return (
         <FooterContainer>
             <FooterSpan>&copy; { new Date().getFullYear() } Rauan Camozzi</FooterSpan>

@@ -39,8 +39,8 @@ export const Button = styled.button`
     background: var(--gray-800);
     border: 0;
     border-radius: 20px;
-    width: 240px;
-    height: 60px;
+    width: 260px;
+    height: 70px;
 
     font: 500 1.5rem Lexend, sans-serif;
 
@@ -52,8 +52,7 @@ export const Button = styled.button`
     transition: all 200ms ease-in-out;
 
     &:hover {
-        background: var(--gray-300);
-        color: var(--gray-800);
+        background: var(--gray-700);
         cursor: pointer;
     }
 `;

@@ -1,4 +1,5 @@
 import React from "react";
+import { acessGitHub, acessLinkedIn } from '../../Social';
 import homeImage from "../../assets/home-image.svg";
 
 import {
@@ -26,11 +27,11 @@ export default function Home() {
         <Text>Desenvolvedor Frontend</Text>
         <HomeButtons>
           <IconContext.Provider value={{ size: '1.4rem' }}>
-            <Button type="button">
+            <Button type="button" onClick={ acessGitHub }>
                 <FiGithub />
                 GitHub
             </Button>
-            <Button type="button">
+            <Button type="button" onClick={ acessLinkedIn }>
                 <FiLinkedin />
                 LinkedIn
             </Button>
