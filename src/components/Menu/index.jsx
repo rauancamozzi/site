@@ -13,7 +13,7 @@ import {
 import { MenuToggle } from './MenuToggle';
 import { NavMenu } from './NavMenu';
 
-import headerImage from '../../assets/logo.svg';
+import headerImage from '../../assets/rauan-brand-white.svg';
 
 import { 
   HamburguerMenuContainer,
@@ -38,7 +38,6 @@ const HeaderMenu = styled(motion.div)`
     height: 35px;
 
     display: block;
-    background-color: aqua;
 
     transition: all 250ms ease-in-out;
 
@@ -90,7 +89,7 @@ const menuVariants = {
     transform: "translateY(0%)",
   },
   closed: {
-    transform: "translateY(-100%)",
+    transform: "translateY(-110%)",
   },
 };
 
@@ -184,11 +183,11 @@ export default function Menu(props) {
           variants={commonVariantsHeader}
           transition={commonTransition}
         >
-          <img src={ headerImage } alt="Image do Header" />
+          <img src={ headerImage } alt="Image do Header"/>
         </HeaderMenu>
       </TopContainer>
         <ContentContainer>
-          <NavMenu isOpen={isOpen} />
+          <NavMenu isOpen={isOpen} toggle={ toggleMenu } />
         </ContentContainer>
       <BottomContainer>
         <FooterMenu

@@ -24,7 +24,7 @@ export default function Home() {
           <br />
           desenvolvedor web.
         </Title>
-        <Text>Desenvolvedor Frontend</Text>
+        <Text>Desenvolvedor Frontend, apaixonado por tecnologia e arte,<br /> e com muito interesse em UI/UX Design.</Text>
         <HomeButtons>
           <IconContext.Provider value={{ size: '1.4rem' }}>
             <Button type="button" onClick={ acessGitHub }>

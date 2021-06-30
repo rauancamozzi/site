@@ -10,6 +10,18 @@ export const HeaderContainer = styled.header`
   height: auto;
 
   margin-top: 32px;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    margin-top: 16px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    margin-top: 16px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -24,19 +36,18 @@ export const Logo = styled.img`
     transform: scale(1.2);
     cursor: pointer;
   }
-`;
 
-export const ResponsiveMenu = styled.div`
-  width: 50px;
-  height: 50px;
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 38px;
+  }
 
-  position: absolute;
-  top: 0;
-  right: 0;
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    width: 38px;
+  }
 `;
 
 export const NavbarMenu = styled.ul`
@@ -47,6 +58,18 @@ export const NavbarMenu = styled.ul`
 
   list-style: none;
   text-align: center;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const NavbarLinks = styled.li`

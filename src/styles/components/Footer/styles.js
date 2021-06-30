@@ -11,12 +11,21 @@ export const FooterContainer = styled.footer`
     bottom: 0;
 
     margin-bottom: 32px;
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        margin-bottom: 16px;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        flex-direction: column-reverse;
+        margin-bottom: 16px;
+        gap: 12px;
+    }
 `;
 
 export const FooterSpan = styled.span`
     font: 400 1rem Lexend, sans-serif;
-
-    color: var(--gray-800);    
+    color: var(--gray-800);
 `;
 
 export const FooterIcons = styled.div`

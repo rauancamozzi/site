@@ -15,7 +15,7 @@ const variants = {
   },
 };
 
-export function NavMenu({ isOpen }) {
+export function NavMenu({ isOpen, toggle }) {
   return (
     <NavMenuContainer>
       <NavList>
@@ -33,7 +33,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <Link to="/sobre">Sobre</Link>
+          <Link to="/sobre" onClick={ toggle }>Sobre</Link>
         </NavLink>
         <NavLink
           initial={false}
@@ -49,7 +49,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <Link to="/portfolio">Portfolio</Link>
+          <Link to="/portfolio" onClick={ toggle }>Portfolio</Link>
         </NavLink>
         <NavLink
           initial={false}
@@ -65,7 +65,7 @@ export function NavMenu({ isOpen }) {
             },
           }}
         >
-          <Link to="/contato">Contato</Link>
+          <Link to="/contato" onClick={ toggle }>Contato</Link>
         </NavLink>
       </NavList>
     </NavMenuContainer>

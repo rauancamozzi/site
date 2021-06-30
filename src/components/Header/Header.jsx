@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
     HeaderContainer,
     Logo,
-    ResponsiveMenu,
     NavbarMenu,
     NavbarLinks
 } from '../../styles/components/Header/styles';
@@ -18,9 +17,9 @@ export default function Header() {
             <Link to="/">
                 <Logo src={ brandImage } alt="Logo" />
             </Link>
-            <ResponsiveMenu>
-                <Menu />
-            </ResponsiveMenu>
+
+            <Menu />
+            
             <NavbarMenu>
                 <Link to="/sobre">
                     <NavbarLinks>Sobre</NavbarLinks>
