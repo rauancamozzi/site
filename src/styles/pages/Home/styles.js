@@ -11,6 +11,8 @@ export const Container = styled.div`
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         flex-direction: column;
         gap: 48px;
+        margin-top: 48px;
+        margin-bottom: 48px;
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -20,7 +22,9 @@ export const Container = styled.div`
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
         flex-direction: column;
-        gap: 20px;
+        gap: 48px;
+        margin-top: 48px;
+        margin-bottom: 48px;
     }
 `;
 
@@ -105,10 +109,10 @@ export const Button = styled.button`
     background: var(--gray-800);
     border: 0;
     border-radius: 20px;
-    width: 220px;
+    width: 240px;
     height: 70px;
 
-    font: 500 1.5rem Lexend, sans-serif;
+    font: 500 1.4rem Lexend, sans-serif;
 
     display: flex;
     align-items: center;
@@ -121,26 +125,41 @@ export const Button = styled.button`
         background: var(--gray-700);
         cursor: pointer;
     }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        width: 220px;
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        width: 200px;
+        height: 56px;
+        font-size: 1rem;
+    }
 `;
 
 export const Image = styled.img`
-    width: 784px;
+    width: 40vw;
     height: auto;
 
     display: block;
     
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        width: 554px;
+        width: 70vw;
         margin-bottom: 24px;
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-        width: 454px;
+        width: 70vw;
         margin-bottom: 18px;
     }
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-        width: 254px;
+        width: 70vw;
         margin-bottom: 36px;
     }
 `;

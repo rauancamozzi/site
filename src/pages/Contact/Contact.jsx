@@ -24,16 +24,16 @@ export default function Contact() {
                 <ContactTitle>Contato</ContactTitle>
                 <IconContext.Provider value={{ size: '1rem' }}>
                     <ContactSocial>
-                        <span><FiAtSign />EMAIL</span>
+                        <span><FiAtSign />Email</span>
                         <a href='mailto:rauancamozzi@hotmail.com'>rauancamozzi@hotmail.com</a>
                         
-                        <span><FiLinkedin />LINKEDIN</span>
+                        <span><FiLinkedin />LinkedIn</span>
                         <a href='https://www.linkedin.com/in/rauan-camozzi'>Rauan Camozzi</a>
 
-                        <span><FiGithub />GITHUB</span>
+                        <span><FiGithub />GitHub</span>
                         <a href='https://www.github.com/rauancamozzi'>rauancamozzi</a>
 
-                        <span><FiInstagram />INSTAGRAM</span>
+                        <span><FiInstagram />Instagram</span>
                         <a href='https://www.instagram.com/rauancamozzi'>rauancamozzi</a>
                 </ContactSocial>
                 </IconContext.Provider>
