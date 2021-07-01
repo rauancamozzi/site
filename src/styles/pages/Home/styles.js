@@ -106,7 +106,7 @@ export const HomeButtons = styled.div`
 
 export const Button = styled.button`
     color: var(--gray-300);
-    background: var(--gray-800);
+    background: blue;
     border: 0;
     border-radius: 20px;
     width: 240px;
