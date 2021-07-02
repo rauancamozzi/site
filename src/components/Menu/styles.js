@@ -26,9 +26,9 @@ export const HamburguerIcon = styled.div`
 `;
 
 export const MenuContainer = styled(motion.div)`
-  width: 100%;
-  height: 100%;
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--gray-900);
   z-index: 90;
   position: fixed;
   top: 0;
@@ -90,7 +90,7 @@ export const NavLink = styled(motion.li)`
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     a {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
     }
   }
 `;

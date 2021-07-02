@@ -64,12 +64,12 @@ export const Title = styled.h1`
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: center;
     }
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 1.8rem;
+        font-size: 2rem;
         text-align: center;
     }
 `;
@@ -84,12 +84,12 @@ export const Text = styled.p`
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         text-align: center;
     }
 `;
@@ -112,7 +112,7 @@ export const Button = styled.button`
     width: 240px;
     height: 70px;
 
-    font: 500 1.4rem Lexend, sans-serif;
+    font: 500 1.2rem Lexend, sans-serif;
 
     display: flex;
     align-items: center;
