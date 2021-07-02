@@ -16,7 +16,7 @@ export default function About() {
             <AboutSection>
                 <AboutTitle>Um pouco sobre mim</AboutTitle>
                 <AboutText>
-                    Sou o Rauan Camozzi, tenho 22 anos e moro em Campinas, 
+                    Sou Rauan Camozzi, tenho 22 anos e moro em Campinas, 
                     São Paulo. Desde 2019,<br /> tenho muito interesse na área da 
                     programação, ultimamente tenho estudado<br /> bastante sozinho 
                     com o intuito de aprender novas tecnologias e ferramentas, para <br /> 
@@ -33,7 +33,7 @@ export default function About() {
                 <AboutText>
                     Iniciei em 2019 e me formei como Técnico em Desenvolvimento
                     de Sistemas pelo SENAI<br /> em 2020, onde programei muito em Java, com
-                    orientação para objetos e desenvolvimento<br /> para Android. Mas o 
+                    orientação para objetos e desenvolvimento<br /> para Android, mas o 
                     Desenvolvimento Web com HTML, CSS e JavaScript me despertaram<br /> 
                     mais interesse, desde então, tenho me dedicado a aprender React.
                 </AboutText>
