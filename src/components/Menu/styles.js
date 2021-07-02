@@ -27,7 +27,7 @@ export const HamburguerIcon = styled.div`
 
 export const MenuContainer = styled(motion.div)`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--gray-900);
   z-index: 90;
   position: fixed;
