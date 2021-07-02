@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { acessGitHub, acessLinkedIn, acessInstagram } from '../../Social';
@@ -183,7 +184,9 @@ export default function Menu(props) {
           variants={commonVariantsHeader}
           transition={commonTransition}
         >
-          <img src={ headerImage } alt="Image do Header"/>
+          <Link to='/' onClick={ toggleMenu }>
+            <img src={ headerImage } alt="Image do Header" />
+          </Link>
         </HeaderMenu>
       </TopContainer>
         <ContentContainer>
