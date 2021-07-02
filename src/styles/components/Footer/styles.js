@@ -26,6 +26,19 @@ export const FooterContainer = styled.footer`
 export const FooterSpan = styled.span`
     font: 400 1rem Lexend, sans-serif;
     color: var(--gray-800);
+    
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        background-color: beige;
+        font-size: 0.8rem;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 0.6rem;
+    }
 `;
 
 export const FooterIcons = styled.div`
@@ -38,9 +51,18 @@ export const FooterIcons = styled.div`
 export const Icons = styled.div`
     color: var(--gray-500);
     transition: all 250ms ease-in-out;
+    font-size: 1.2rem;
 
     &:hover {
         color: var(--gray-800);
         cursor: pointer;
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 1rem;
     }
 `;

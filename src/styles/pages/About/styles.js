@@ -64,7 +64,7 @@ export const AboutTitle = styled.h1`
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 `;
 

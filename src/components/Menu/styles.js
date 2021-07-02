@@ -61,11 +61,7 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 200px;
-
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
-    gap: 100px;
-  }
+  gap: 80px;
 `;
 
 export const NavLink = styled(motion.li)`
@@ -85,6 +81,14 @@ export const NavLink = styled(motion.li)`
   &:hover {
     a {
       color: var(--gray-500);
+    }
+  }
+
+  
+      
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    a {
+      font-size: 3rem;
     }
   }
 

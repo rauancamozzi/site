@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { acessGitHub, acessLinkedIn, acessInstagram } from '../../Social';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { acessGitHub, acessLinkedIn, acessInstagram } from "../../Social";
 
-import { IconContext } from 'react-icons';
-import { 
-  FiGithub,
-  FiLinkedin,
-  FiInstagram
-} from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 
-import { MenuToggle } from './MenuToggle';
-import { NavMenu } from './NavMenu';
+import { MenuToggle } from "./MenuToggle";
+import { NavMenu } from "./NavMenu";
 
-import headerImage from '../../assets/rauan-brand-white.svg';
+import headerImage from "../../assets/rauan-brand-white.svg";
 
-import { 
+import {
   HamburguerMenuContainer,
   MenuContainer,
-  ContentContainer
-} from './styles';
+  ContentContainer,
+} from "./styles";
 
 const TopContainer = styled.div`
   display: flex;
@@ -43,8 +38,8 @@ const HeaderMenu = styled(motion.div)`
     transition: all 250ms ease-in-out;
 
     &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+      transform: scale(1.1);
+      cursor: pointer;
     }
   }
 `;
@@ -73,6 +68,19 @@ const FooterIcons = styled(motion.div)`
 const Icons = styled.div`
   color: var(--gray-300);
   transition: all 250ms ease-in-out;
+  font-size: 1.2rem;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        
+  }
+      
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    
+  }
+      
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+      font-size: 1rem;
+  }
 
   &:hover {
     color: var(--gray-500);
@@ -83,6 +91,10 @@ const Icons = styled.div`
 const FooterSpan = styled(motion.span)`
   font: 400 1rem Lexend, sans-serif;
   color: var(--gray-300);
+  
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const menuVariants = {
@@ -96,7 +108,7 @@ const menuVariants = {
 
 const menuTransition = {
   type: "tween",
-  duration: 1.2
+  duration: 1.2,
 };
 
 const commonVariantsHeader = {
@@ -177,50 +189,55 @@ export default function Menu(props) {
         variants={menuVariants}
         transition={menuTransition}
       >
-      <TopContainer>
-        <HeaderMenu
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={commonVariantsHeader}
-          transition={commonTransition}
-        >
-          <Link to='/' onClick={ toggleMenu }>
-            <img src={ headerImage } alt="Image do Header" />
-          </Link>
-        </HeaderMenu>
-      </TopContainer>
+        <TopContainer>
+          <HeaderMenu
+            initial={false}
+            animate={isOpen ? "show" : "hide"}
+            variants={commonVariantsHeader}
+            transition={commonTransition}
+          >
+            <Link to="/" onClick={toggleMenu}>
+              <img src={headerImage} alt="Image do Header" />
+            </Link>
+          </HeaderMenu>
+        </TopContainer>
         <ContentContainer>
-          <NavMenu isOpen={isOpen} toggle={ toggleMenu } />
+          <NavMenu isOpen={isOpen} toggle={toggleMenu} />
         </ContentContainer>
-      <BottomContainer>
-        <FooterMenu
-          initial={false}
-          animate={isOpen ? "show" : "hide"}
-          variants={commonVariantsFooter}
-          transition={commonTransition}
-        > 
-          <IconContext.Provider value={{ size: '1.4rem' }}>
+        <BottomContainer>
+          <FooterMenu
+            initial={false}
+            animate={isOpen ? "show" : "hide"}
+            variants={commonVariantsFooter}
+            transition={commonTransition}
+          >
             <FooterIcons
               initial={false}
               animate={isOpen ? "show" : "hide"}
               variants={commonVariantsSocial}
               transition={commonTransition}
             >
-              <Icons><FiGithub onClick={ acessGitHub } /></Icons>
-              <Icons><FiLinkedin onClick={ acessLinkedIn } /></Icons>
-              <Icons><FiInstagram onClick={ acessInstagram } /></Icons>
+              <Icons>
+                <FiGithub onClick={acessGitHub} />
+              </Icons>
+              <Icons>
+                <FiLinkedin onClick={acessLinkedIn} />
+              </Icons>
+              <Icons>
+                <FiInstagram onClick={acessInstagram} />
+              </Icons>
             </FooterIcons>
-          </IconContext.Provider>
-          <FooterSpan
-            initial={false}
-            animate={isOpen ? "show" : "hide"}
-            variants={commonVariantsSpan}
-            transition={commonTransition}
-          >
-            &copy; { new Date().getFullYear() } Rauan Camozzi
-          </FooterSpan>
-        </FooterMenu>
-      </BottomContainer>
+
+            <FooterSpan
+              initial={false}
+              animate={isOpen ? "show" : "hide"}
+              variants={commonVariantsSpan}
+              transition={commonTransition}
+            >
+              &copy; {new Date().getFullYear()} Rauan Camozzi
+            </FooterSpan>
+          </FooterMenu>
+        </BottomContainer>
       </MenuContainer>
     </HamburguerMenuContainer>
   );

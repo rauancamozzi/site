@@ -14,10 +14,14 @@ export const PortfolioSection = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
 `;
 
 export const PortfolioTitle = styled.h1`
     font: 700 3rem Lexend, sans-serif;
     color: var(--gray-800);
+    text-align: center;
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 2rem;
+    }
 `;
