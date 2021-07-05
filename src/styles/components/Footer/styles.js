@@ -26,10 +26,6 @@ export const FooterContainer = styled.footer`
 export const FooterSpan = styled.span`
     font: 400 1rem Lexend, sans-serif;
     color: var(--gray-800);
-    
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        
-    }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
         font-size: 0.8rem;
