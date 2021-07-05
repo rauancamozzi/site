@@ -1,44 +1,102 @@
-import React from 'react';
-import contactImage from '../../assets/contact-image.svg';
+import React from "react";
+import contactImage from "../../assets/contact-image.svg";
 
 import {
-    ContactContainer,
-    ContactSection,
-    ContactTitle,
-    ContactSocial,
-    ContactImage
-} from '../../styles/pages/Contact/styles';
+  ContactContainer,
+  ContactSection,
+  ContactTitle,
+  ContactSocial,
+  ContactCard,
+  ContactCardHeader,
+  ContactCardTitle,
+  ContactCardIcon,
+  ContactCardLink,
+  ContactImage,
+} from "../../styles/pages/Contact/styles";
 
-import { IconContext } from 'react-icons';
+import { 
+  FiGithub, 
+  FiLinkedin, 
+  FiAtSign,
+  FiInstagram, 
+  FiArrowUpRight 
+} from "react-icons/fi";
+
 import {
-    FiGithub,
-    FiLinkedin,
-    FiAtSign,
-    FiInstagram
-} from 'react-icons/fi';
+  acessGitHub,
+  acessLinkedIn,
+  acessInstagram,
+  inviteEmail
+} from '../../Social';
 
 export default function Contact() {
-    return (
-        <ContactContainer>
-            <ContactSection>
-                <ContactTitle>Contato</ContactTitle>
-                <IconContext.Provider value={{ size: '1rem' }}>
-                    <ContactSocial>
-                        <span><FiAtSign />Email</span>
-                        <a href='mailto:rauancamozzi@hotmail.com'>rauancamozzi@hotmail.com</a>
-                        
-                        <span><FiLinkedin />LinkedIn</span>
-                        <a href='https://www.linkedin.com/in/rauan-camozzi'>Rauan Camozzi</a>
+  return (
+    <ContactContainer>
+      <ContactSection>
+        <ContactTitle>Contato</ContactTitle>
+        <ContactSocial>
+            <ContactCard onClick={ inviteEmail }>
+              <ContactCardHeader>
+                <ContactCardTitle>
+                  <FiAtSign />
+                  EMAIL
+                </ContactCardTitle>
+                <ContactCardIcon>
+                  <FiArrowUpRight />
+                </ContactCardIcon>
+              </ContactCardHeader>
+              <ContactCardLink>
+                rauancamozzi@hotmail.com
+              </ContactCardLink>
+            </ContactCard>
 
-                        <span><FiGithub />GitHub</span>
-                        <a href='https://www.github.com/rauancamozzi'>rauancamozzi</a>
+            <ContactCard onClick={ acessLinkedIn }>
+              <ContactCardHeader>
+                <ContactCardTitle>
+                  <FiLinkedin />
+                  LINKEDIN
+                </ContactCardTitle>
+                <ContactCardIcon>
+                  <FiArrowUpRight />
+                </ContactCardIcon>
+              </ContactCardHeader>
+              <ContactCardLink>
+                Rauan Camozzi
+              </ContactCardLink>
+            </ContactCard>
 
-                        <span><FiInstagram />Instagram</span>
-                        <a href='https://www.instagram.com/rauancamozzi'>rauancamozzi</a>
-                </ContactSocial>
-                </IconContext.Provider>
-            </ContactSection>
-            <ContactImage src={ contactImage } alt='Imagem da Página Contato' />
-        </ContactContainer>
-    );
+            <ContactCard onClick={ acessGitHub }>
+              <ContactCardHeader>
+                <ContactCardTitle>
+                  <FiGithub />
+                  GITHUB
+                </ContactCardTitle>
+                <ContactCardIcon>
+                  <FiArrowUpRight />
+                </ContactCardIcon>
+              </ContactCardHeader>
+              <ContactCardLink>
+                rauancamozzi
+              </ContactCardLink>
+            </ContactCard>
+
+            <ContactCard onClick={ acessInstagram }>
+              <ContactCardHeader>
+                <ContactCardTitle>
+                  <FiInstagram />
+                  INSTAGRAM
+                </ContactCardTitle>
+                <ContactCardIcon>
+                  <FiArrowUpRight />
+                </ContactCardIcon>
+              </ContactCardHeader>
+              <ContactCardLink>
+                rauancamozzi
+              </ContactCardLink>
+            </ContactCard>
+        </ContactSocial>
+      </ContactSection>
+      <ContactImage src={contactImage} alt="Imagem da Página Contato" />
+    </ContactContainer>
+  );
 }

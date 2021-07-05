@@ -32,7 +32,6 @@ export const FooterSpan = styled.span`
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
-        background-color: beige;
         font-size: 0.8rem;
     }
 

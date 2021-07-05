@@ -12,3 +12,8 @@ export function acessInstagram(event) {
     event.preventDefault();
     window.location.href = "https://www.instagram.com/rauancamozzi";
 }
+
+export function inviteEmail(event) {
+    event.preventDefault();
+    window.location.href = "mailto:rauancamozzi@hotmail.com";
+}
