@@ -11,9 +11,26 @@ import Menu from '../Menu';
 
 import brandImage from '../../assets/logo.svg';
 
+const headerVariants = {
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+}
+
+const headerTransition = { 
+    duration: 1,
+    delay: 0.2,
+    type: "tween",
+    ease: "easeInOut"
+}
+
 export default function Header() {
     return (
-        <HeaderContainer>
+        <HeaderContainer
+            initial="out"
+            animate="in"
+            variants={ headerVariants } 
+            transition={ headerTransition }
+        >
             <Link to="/">
                 <Logo src={ brandImage } alt="Logo" />
             </Link>

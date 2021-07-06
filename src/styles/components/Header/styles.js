@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled(motion.header)`
   display: flex;
   align-items: center;
   justify-content: space-between;

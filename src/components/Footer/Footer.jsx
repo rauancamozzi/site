@@ -10,10 +10,27 @@ import {
 
 import { FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi';
 
+const footerVariants = {
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+}
+
+const footerTransition = { 
+    duration: 1,
+    delay: 0.2,
+    type: "tween",
+    ease: "easeInOut"
+}
+
 export default function Footer() {
     
     return (
-        <FooterContainer>
+        <FooterContainer
+            initial="out"
+            animate="in"
+            variants={ footerVariants } 
+            transition={ footerTransition }
+        >
             <FooterSpan>&copy; { new Date().getFullYear() } Rauan Camozzi</FooterSpan>
                 <FooterIcons>
                     <Icons><FiGithub onClick={ acessGitHub } /></Icons>
