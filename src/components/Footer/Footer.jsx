@@ -17,7 +17,7 @@ const footerVariants = {
 
 const footerTransition = { 
     duration: 1,
-    delay: 0.2,
+    delay: 0.4,
     type: "tween",
     ease: "easeInOut"
 }
@@ -28,6 +28,7 @@ export default function Footer() {
         <FooterContainer
             initial="out"
             animate="in"
+            exit="out"
             variants={ footerVariants } 
             transition={ footerTransition }
         >

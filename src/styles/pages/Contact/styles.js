@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const ContactContainer = styled.div`
+export const ContactContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: space-between;

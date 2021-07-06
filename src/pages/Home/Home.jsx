@@ -15,9 +15,27 @@ import {
 import { IconContext } from 'react-icons';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 
+const containerVariants = {
+  in: { opacity: 1 },
+  out: { opacity: 0 },
+}
+
+const containerTransition = {
+  duration: 0.6,
+  delay: 0.4,
+  type: "tween",
+  ease: "easeInOut"
+}
+
 export default function Home() {
   return (
-    <Container>
+    <Container
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={ containerVariants }
+      transition={ containerTransition }
+    >
       <Section>
         <Title>
           Olá, sou o Rauan,

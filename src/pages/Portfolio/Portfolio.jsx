@@ -5,9 +5,27 @@ import {
     PortfolioTitle
 } from '../../styles/pages/Portfolio/styles';
 
+const containerVariants = {
+    in: { opacity: 1 },
+    out: { opacity: 0 },
+}
+  
+const containerTransition = {
+    duration: 0.6,
+    delay: 0.4,
+    type: "tween",
+    ease: "easeInOut"
+}
+
 export default function Portfolio() {
     return (
-        <PortfolioContainer>
+        <PortfolioContainer
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={ containerVariants }
+            transition={ containerTransition }
+        >
             <PortfolioSection>
                 <PortfolioTitle>Projetos em desenvolvimento.</PortfolioTitle>
             </PortfolioSection>

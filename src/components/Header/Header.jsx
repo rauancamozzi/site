@@ -18,7 +18,7 @@ const headerVariants = {
 
 const headerTransition = { 
     duration: 1,
-    delay: 0.2,
+    delay: 0.4,
     type: "tween",
     ease: "easeInOut"
 }
@@ -28,6 +28,7 @@ export default function Header() {
         <HeaderContainer
             initial="out"
             animate="in"
+            exit="out"
             variants={ headerVariants } 
             transition={ headerTransition }
         >

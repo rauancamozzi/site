@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const PortfolioContainer = styled.div`
+export const PortfolioContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;

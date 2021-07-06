@@ -1,14 +1,16 @@
-import React, { Fragment } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { Fragment } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
+import styled from "styled-components";
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import { AnimatePresence } from "framer-motion";
 
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Portfolio from './pages/Portfolio/Portfolio';
-import Contact from './pages/Contact/Contact';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import Contact from "./pages/Contact/Contact";
 
 const Container = styled.div`
   display: flex;
@@ -34,22 +36,26 @@ const PagesContent = styled.div`
 `;
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <Fragment>
       <Container>
         <Header />
         <Pages>
           <PagesContent>
-            <Switch>
-              <Route path="/" exact component={ Home } />
-              <Route path="/sobre" component={ About } />
-              <Route path="/portfolio" component={ Portfolio } />
-              <Route path="/contato" component={ Contact } />
-            </Switch>
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={ location } key={ location.pathname }>
+                <Route path="/" exact component={Home} />
+                <Route path="/sobre" component={About} />
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/contato" component={Contact} />
+              </Switch>
+            </AnimatePresence>
           </PagesContent>
         </Pages>
         <Footer />
       </Container>
     </Fragment>
-  )
+  );
 }
