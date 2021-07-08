@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { 
     HeaderContainer,
     Logo,
@@ -9,7 +9,11 @@ import {
 
 import Menu from '../Menu';
 
+import { NavBarItems } from '../../NavBarItems';
+
 import brandImage from '../../assets/logo.svg';
+
+import '../../styles/components/Header/styles.css';
 
 const headerVariants = {
     in: { opacity: 1 },
@@ -39,16 +43,23 @@ export default function Header() {
             <Menu />
             
             <NavbarMenu>
-                <Link to="/sobre">
-                    <NavbarLinks>Sobre</NavbarLinks>
-                </Link>
-                <Link to="/portfolio">
-                    <NavbarLinks>Portfolio</NavbarLinks>
-                </Link>
-                <Link to="/contato">
-                    <NavbarLinks>Contato</NavbarLinks>
-                </Link>
+                {
+                    NavBarItems.map((item, index) => {
+                        return (
+                            <NavbarLinks key={ index }>
+                                <NavLink
+                                    to={ item.url }
+                                    className={ item.class }
+                                    activeClassName="link-selected"
+                                >
+                                    { item.title }
+                                </NavLink>
+                            </NavbarLinks>
+                        );
+                    })
+                }
             </NavbarMenu>
         </HeaderContainer>
     );
+
 }

@@ -1,0 +1,19 @@
+.navbar-links {
+    display: inline-block;
+
+    text-decoration: none;
+    text-align: center;
+
+    color: var(--gray-500);
+
+    transition: all 250ms ease-in-out;
+}
+
+.navbar-links:hover {
+    color: var(--gray-800);
+    cursor: pointer;
+}
+
+.link-selected {
+    color: var(--gray-800);
+}

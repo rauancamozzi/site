@@ -84,9 +84,4 @@ export const NavbarLinks = styled.li`
   padding-left: 3.4rem;
 
   transition: all 250ms ease-in-out;
-
-  &:hover {
-    color: var(--gray-800);
-    cursor: pointer;
-  }
 `;
