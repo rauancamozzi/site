@@ -77,9 +77,7 @@ export const ContactSocial = styled.div`
 
 export const ContactCard = styled.div`
     width: 30vw;
-    height: auto;
     
-    background: linear-gradient(to right, var(--gray-100), var(--gray-200));
     padding: 1rem;
     border-radius: 20px;
 
@@ -132,25 +130,8 @@ export const ContactCardTitle = styled.div`
     }
 `;
 
-export const ContactCardIcon = styled.div`
-    font-size: 2rem;
-
-    @media only screen and (min-width: 769px) and (max-width: 1024px) {
-        font-size: 1.8rem;
-    }
-
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-        font-size: 1.8rem;
-    }
-
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 1.6rem;
-    }
-`;
-
 export const ContactCardLink = styled.div`
     font: 700 2rem Lexend, sans-serif;
-    margin-top: 18px;
 
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         font-size: 1.8rem;

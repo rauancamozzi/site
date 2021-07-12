@@ -9,7 +9,6 @@ import {
   ContactCard,
   ContactCardHeader,
   ContactCardTitle,
-  ContactCardIcon,
   ContactCardLink,
   ContactImage,
 } from "../../styles/pages/Contact/styles";
@@ -18,8 +17,7 @@ import {
   FiGithub, 
   FiLinkedin, 
   FiAtSign,
-  FiInstagram, 
-  FiArrowUpRight 
+  FiInstagram,
 } from "react-icons/fi";
 
 import {
@@ -59,9 +57,6 @@ export default function Contact() {
                   <FiAtSign />
                   EMAIL
                 </ContactCardTitle>
-                <ContactCardIcon>
-                  <FiArrowUpRight />
-                </ContactCardIcon>
               </ContactCardHeader>
               <ContactCardLink>
                 rauancamozzi@hotmail.com
@@ -74,9 +69,6 @@ export default function Contact() {
                   <FiLinkedin />
                   LINKEDIN
                 </ContactCardTitle>
-                <ContactCardIcon>
-                  <FiArrowUpRight />
-                </ContactCardIcon>
               </ContactCardHeader>
               <ContactCardLink>
                 Rauan Camozzi
@@ -89,9 +81,6 @@ export default function Contact() {
                   <FiGithub />
                   GITHUB
                 </ContactCardTitle>
-                <ContactCardIcon>
-                  <FiArrowUpRight />
-                </ContactCardIcon>
               </ContactCardHeader>
               <ContactCardLink>
                 rauancamozzi
@@ -104,9 +93,6 @@ export default function Contact() {
                   <FiInstagram />
                   INSTAGRAM
                 </ContactCardTitle>
-                <ContactCardIcon>
-                  <FiArrowUpRight />
-                </ContactCardIcon>
               </ContactCardHeader>
               <ContactCardLink>
                 rauancamozzi
