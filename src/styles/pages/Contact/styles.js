@@ -77,9 +77,8 @@ export const ContactSocial = styled.div`
 
 export const ContactCard = styled.div`
     width: 30vw;
-    
-    padding: 1rem;
     border-radius: 20px;
+    margin-bottom: 24px;
 
     color: var(--gray-500);
 
