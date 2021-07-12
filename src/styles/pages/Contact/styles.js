@@ -105,7 +105,24 @@ export const ContactCard = styled.div`
 export const ContactCardHeader = styled.div`
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+        font-size: 0.8rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+        font-size: 0.8rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 0.6rem;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 export const ContactCardTitle = styled.div`
@@ -131,17 +148,21 @@ export const ContactCardTitle = styled.div`
 
 export const ContactCardLink = styled.div`
     font: 700 2rem Lexend, sans-serif;
+    
 
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         font-size: 1.8rem;
+        text-align: center;
     }
 
     @media only screen and (min-width: 481px) and (max-width: 768px) {
         font-size: 1.4rem;
+        text-align: center;
     }
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
         font-size: 1rem;
+        text-align: center;
     }
 `;
 
