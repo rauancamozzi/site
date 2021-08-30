@@ -5,6 +5,9 @@ import {
     PortfolioTitle
 } from '../../styles/pages/Portfolio/styles';
 
+import Card from '../../components/Card/Card';
+import rhaastProjectIcon from '../../assets/rhaast/icon.png';
+
 const containerVariants = {
     in: { opacity: 1 },
     out: { opacity: 0 },
@@ -27,8 +30,10 @@ export default function Portfolio() {
             transition={ containerTransition }
         >
             <PortfolioSection>
-                <PortfolioTitle>Projetos em desenvolvimento.</PortfolioTitle>
+                <PortfolioTitle>Portofolio</PortfolioTitle>
             </PortfolioSection>
+            <Card image={rhaastProjectIcon} title="Rhaast" subtitle="BOT" url="/sobre"/>
         </PortfolioContainer>
+        
     );
 }

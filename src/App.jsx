@@ -27,7 +27,6 @@ const Pages = styled.div`
 `;
 
 const PagesContent = styled.div`
-  width: 100vw;
   height: auto;
 
   display: flex;

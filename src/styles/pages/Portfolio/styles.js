@@ -3,22 +3,20 @@ import { motion } from "framer-motion";
 
 export const PortfolioContainer = styled(motion.div)`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-
     width: 90vw;
-    height: 100%;
+    height: 80vh;
 `;
 
 export const PortfolioSection = styled.section`
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    margin-bottom: 96px;
 `;
 
 export const PortfolioTitle = styled.h1`
-    font: 700 3rem Lexend, sans-serif;
+    font: 700 4.5rem Lexend, sans-serif;
     color: var(--gray-800);
     text-align: center;
 
