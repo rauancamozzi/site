@@ -41,7 +41,6 @@ const PagesContent = styled.div`
 `;
 
 export default function App() {
-  const location = useLocation();
 
   return (
       <Fragment>
@@ -50,7 +49,7 @@ export default function App() {
           <Pages>
             <PagesContent>
               <AnimatePresence exitBeforeEnter>
-                <Switch location={location} key={location.pathname}>
+                <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/sobre" component={About} />
                   <Route path="/contato" component={Contact} />
