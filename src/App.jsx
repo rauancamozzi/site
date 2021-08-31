@@ -43,7 +43,8 @@ const PagesContent = styled.div`
 export default function App() {
 
   return (
-      <Fragment>
+      <Router>
+        <Fragment>
         <Container>
           <Header />
           <Pages>
@@ -64,6 +65,7 @@ export default function App() {
           <Footer />
         </Container>
       </Fragment>
+      </Router>
   );
 }
 
