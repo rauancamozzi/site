@@ -45,6 +45,7 @@ export default function App() {
 
   return (
     <Router>
+      <Fragment>
       <Container>
         <Header />
         <Pages>
@@ -63,6 +64,7 @@ export default function App() {
         </Pages>
         <Footer />
       </Container>
+      </Fragment>
     </Router>
   );
 }
