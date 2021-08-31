@@ -3,7 +3,6 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  useLocation
 } from "react-router-dom";
 import styled from "styled-components";
 
@@ -41,8 +40,6 @@ const PagesContent = styled.div`
 `;
 
 export default function App() {
-  const location = useLocation();
-
   return (
     <Router>
       <Fragment>
@@ -51,7 +48,7 @@ export default function App() {
         <Pages>
           <PagesContent>
             <AnimatePresence exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
+              <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/sobre" component={About} />
                 <Route path="/contato" component={Contact} />
