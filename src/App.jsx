@@ -57,6 +57,7 @@ export default function App() {
                   
                   <Route path="/portfolio" exact component={Portfolio} />
                   <Route path="/portfolio/rhaast" component={Rhaast} />
+                  <Route path="*" component={NoMatch} />
                 </Switch>
               </AnimatePresence>
             </PagesContent>
@@ -64,5 +65,17 @@ export default function App() {
           <Footer />
         </Container>
       </Fragment>
+  );
+}
+
+function NoMatch() {
+  let location = useLocation();
+
+  return (
+    <div>
+      <h1>
+        No match for <code>{location.pathname}</code>
+      </h1>
+    </div>
   );
 }
