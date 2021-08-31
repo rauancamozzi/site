@@ -57,7 +57,6 @@ export default function App() {
                   
                 <Route path="/portfolio" exact component={Portfolio} />
                 <Route path="/portfolio/rhaast" component={Rhaast} />
-                <Route path="*" component={NoMatch} />
               </Switch>
             </AnimatePresence>
           </PagesContent>
