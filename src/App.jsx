@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useLocation
 } from "react-router-dom";
 import styled from "styled-components";
 
@@ -65,5 +66,17 @@ export default function App() {
         </Container>
       </Fragment>
       </Router>
+  );
+}
+
+function NoMatch() {
+  let location = useLocation();
+
+  return (
+    <div>
+      <h1>
+        No match for <code>{location.pathname}</code>
+      </h1>
+    </div>
   );
 }
