@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   useLocation
@@ -41,42 +41,29 @@ const PagesContent = styled.div`
 `;
 
 export default function App() {
+  const location = useLocation();
 
   return (
-      <Router>
-        <Fragment>
-        <Container>
-          <Header />
-          <Pages>
-            <PagesContent>
-              <AnimatePresence exitBeforeEnter>
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/sobre" component={About} />
-                  <Route path="/contato" component={Contact} />
+    <Router>
+      <Container>
+        <Header />
+        <Pages>
+          <PagesContent>
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route path="/" exact component={Home} />
+                <Route path="/sobre" component={About} />
+                <Route path="/contato" component={Contact} />
                   
-                  <Route path="/portfolio" exact component={Portfolio} />
-                  <Route path="/portfolio/rhaast" component={Rhaast} />
-                  <Route path="*" component={NoMatch} />
-                </Switch>
-              </AnimatePresence>
-            </PagesContent>
-          </Pages>
-          <Footer />
-        </Container>
-      </Fragment>
-      </Router>
-  );
-}
-
-function NoMatch() {
-  let location = useLocation();
-
-  return (
-    <div>
-      <h1>
-        No match for <code>{location.pathname}</code>
-      </h1>
-    </div>
+                <Route path="/portfolio" exact component={Portfolio} />
+                <Route path="/portfolio/rhaast" component={Rhaast} />
+                <Route path="*" component={NoMatch} />
+              </Switch>
+            </AnimatePresence>
+          </PagesContent>
+        </Pages>
+        <Footer />
+      </Container>
+    </Router>
   );
 }
