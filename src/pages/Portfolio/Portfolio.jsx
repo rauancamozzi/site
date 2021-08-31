@@ -32,7 +32,7 @@ export default function Portfolio() {
             <PortfolioSection>
                 <PortfolioTitle>Portofolio</PortfolioTitle>
             </PortfolioSection>
-            <Card image={rhaastProjectIcon} title="Rhaast" subtitle="BOT" url="/sobre"/>
+            <Card image={rhaastProjectIcon} title='Rhaast' subtitle='BOT' url='/portfolio/rhaast' />
         </PortfolioContainer>
         
     );

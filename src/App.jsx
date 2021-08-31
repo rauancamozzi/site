@@ -1,5 +1,10 @@
 import React, { Fragment } from "react";
-import { Switch, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation
+} from "react-router-dom";
 import styled from "styled-components";
 
 import { AnimatePresence } from "framer-motion";
@@ -11,6 +16,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
+import Rhaast from "./pages/Project/Rhaast/Rhaast";
 
 const Container = styled.div`
   display: flex;
@@ -38,23 +44,25 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <Fragment>
-      <Container>
-        <Header />
-        <Pages>
-          <PagesContent>
-            <AnimatePresence exitBeforeEnter>
-              <Switch location={ location } key={ location.pathname }>
-                <Route path="/" exact component={Home} />
-                <Route path="/sobre" component={About} />
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/contato" component={Contact} />
-              </Switch>
-            </AnimatePresence>
-          </PagesContent>
-        </Pages>
-        <Footer />
-      </Container>
-    </Fragment>
+      <Fragment>
+        <Container>
+          <Header />
+          <Pages>
+            <PagesContent>
+              <AnimatePresence exitBeforeEnter>
+                <Switch location={location} key={location.pathname}>
+                  <Route path="/" exact component={Home} />
+                  <Route path="/sobre" component={About} />
+                  <Route path="/contato" component={Contact} />
+                  
+                  <Route path="/portfolio" exact component={Portfolio} />
+                  <Route path="/portfolio/rhaast" component={Rhaast} />
+                </Switch>
+              </AnimatePresence>
+            </PagesContent>
+          </Pages>
+          <Footer />
+        </Container>
+      </Fragment>
   );
 }
