@@ -8,17 +8,18 @@ import {
   ProjectDescription,
   ProjectText,
   ProjectTextTitle,
-  ProjectTextImage
+  ProjectTextImage,
+  ProjectImageGroup
 } from '../../../styles/pages/Project/styles';
 
 import rhaastProjectIcon from '../../../assets/rhaast/icon.png';
-import rhaastEconomy from '../../../assets/rhaast/economy.png';
-import rhaastLevel from '../../../assets/rhaast/level.png';
-import rhaastStore from '../../../assets/rhaast/store.png';
-import rhaastInventory from '../../../assets/rhaast/inventory.png';
-import rhaastGuess1 from '../../../assets/rhaast/guess1.png';
-import rhaastGuess2 from '../../../assets/rhaast/guess2.png';
-import rhaastGuess3 from '../../../assets/rhaast/guess3.png';
+import rhaastEconomy from '../../../assets/rhaast/economy.svg';
+import rhaastLevel from '../../../assets/rhaast/level.svg';
+import rhaastStore from '../../../assets/rhaast/store.svg';
+import rhaastInventory from '../../../assets/rhaast/inventory.svg';
+import rhaastGuess1 from '../../../assets/rhaast/guess1.svg';
+import rhaastGuess2 from '../../../assets/rhaast/guess2.svg';
+import rhaastGuess3 from '../../../assets/rhaast/guess3.svg';
 
 const projectVariants = {
   in: { opacity: 1 },
@@ -64,11 +65,11 @@ export default function Rhaast() {
             Assim que o palpite é encerrado, os usuários que apostaram na opção ganhadora ganham uma porcentagem 
             proporcional ao que o usuário apostou, da quantidade total apostada na opção perdedora.
           </ProjectText>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '32px' }}>
-          <ProjectTextImage src={rhaastGuess1} />
-          <ProjectTextImage src={rhaastGuess2} />
-          <ProjectTextImage src={rhaastGuess3} />
-          </div>
+          <ProjectImageGroup>
+            <ProjectTextImage src={rhaastGuess1} />
+            <ProjectTextImage src={rhaastGuess2} />
+            <ProjectTextImage src={rhaastGuess3} />
+          </ProjectImageGroup>
           <ProjectTextTitle>Economia</ProjectTextTitle>
           <ProjectText>
             O bot possui um sistema de economia, cada usuário tem um saldo que contém dinheiro (fictício) na carteira 
@@ -96,7 +97,7 @@ export default function Rhaast() {
           <ProjectTextImage src={rhaastInventory} />
           <ProjectTextTitle>Tecnologias utilizadas</ProjectTextTitle>
           <ProjectText>
-            Javascript / Node.js / Discord.js / MongoDB / Git
+            Javascript • Node.js • Discord.js • MongoDB • Git
           </ProjectText>
         </ProjectSection>
       </ProjectContainer>
