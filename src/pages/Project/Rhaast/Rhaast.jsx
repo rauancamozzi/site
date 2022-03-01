@@ -13,13 +13,13 @@ import {
 } from '../../../styles/pages/Project/styles';
 
 import rhaastProjectIcon from '../../../assets/rhaast/icon.png';
-import rhaastEconomy from '../../../assets/rhaast/economy.svg';
-import rhaastLevel from '../../../assets/rhaast/level.svg';
-import rhaastStore from '../../../assets/rhaast/store.svg';
-import rhaastInventory from '../../../assets/rhaast/inventory.svg';
-import rhaastGuess1 from '../../../assets/rhaast/guess1.svg';
-import rhaastGuess2 from '../../../assets/rhaast/guess2.svg';
-import rhaastGuess3 from '../../../assets/rhaast/guess3.svg';
+import rhaastEconomy from '../../../assets/rhaast/economy.png';
+import rhaastLevel from '../../../assets/rhaast/level.png';
+import rhaastStore from '../../../assets/rhaast/store.png';
+import rhaastInventory from '../../../assets/rhaast/inventory.png';
+import rhaastGuess1 from '../../../assets/rhaast/guess1.png';
+import rhaastGuess2 from '../../../assets/rhaast/guess2.png';
+import rhaastGuess3 from '../../../assets/rhaast/guess3.png';
 
 const projectVariants = {
   in: { opacity: 1 },

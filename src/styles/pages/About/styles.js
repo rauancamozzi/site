@@ -72,6 +72,7 @@ export const AboutTitle = styled.h1`
 export const AboutSubtitle = styled.h2`
     font: 700 2rem Lexend, sans-serif;
     color: var(--gray-800);
+    margin-top: 24px;
 
     @media only screen and (min-width: 769px) and (max-width: 1024px) {
         text-align: center;
